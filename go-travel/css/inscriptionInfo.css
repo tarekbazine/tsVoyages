@@ -7,3 +7,11 @@
     background: #8a8888
 }
 
+@media(max-width:882px){
+    .inscription{
+   margin-top: 112px; 
+   margin-bottom: 30px; 
+   margin-left: 0%;
+}
+}
+
