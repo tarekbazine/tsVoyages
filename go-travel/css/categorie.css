@@ -64,3 +64,24 @@ background: #F5F5F5
 background: #F5F5F5;
 margin: 0px
 }
+
+.feature-full-1col .desc{
+    width: 70%
+}
+
+.feature-full-1col .image{
+    width: 30%
+}
+
+.border-left{
+    border-left: solid;
+        padding-top: 70px;
+}
+.btn.btn-primary.color-blue
+{
+    background: #51BED8
+}
+.btn.btn-primary.color-blue:hover
+{
+    background: #333333
+}
