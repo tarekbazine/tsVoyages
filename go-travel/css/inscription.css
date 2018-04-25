@@ -1,0 +1,36 @@
+.inscription{
+   margin-top: 112px; 
+   margin-bottom: 30px; 
+   margin-left: 25%;
+}
+.btn.btn-primary.btn-block.btn-grey{
+    background: #8a8888
+}
+
+.inscription .form-control{
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    color: #F78536;
+}
+
+.tabulation .form-control{
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    color: #F78536;
+}
