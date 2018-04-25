@@ -1236,7 +1236,8 @@ figure {
 
 #tour-cart-btn a{
 	background-color: #F78536;
-	color: #fff;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 #tour-cart-btn a:hover{
