@@ -85,3 +85,29 @@
 #titre-cat{
     margin-bottom: 0px;
 }
+#upload{
+    border-radius: 10%;
+    height: 60px;
+    width:60px;
+    margin: 15px;
+}
+.upload-div{
+    text-align: center;
+}
+
+#selected-cat{
+    height: 80px;
+    width:80px;
+    padding: 0px;
+    border-color:#333;
+}
+#nom-cat-selected{
+    color: #333;
+}
+.btn-prgme{
+    color: #2fa4ca;
+}
+#download-prgme{
+    width: 100%;
+    text-align: center;
+}
