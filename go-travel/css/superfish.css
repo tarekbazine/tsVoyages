@@ -6,6 +6,7 @@
 }
 .sf-menu li {
 	position: relative;
+	min-width: 110px;
 }
 .sf-menu ul {
 	position: absolute;
