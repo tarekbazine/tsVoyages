@@ -32,7 +32,23 @@
 
     <link rel="stylesheet" href="css/categorie.css">
     <link rel="stylesheet" href="css/inscription.css">
-
+    <style>
+        .card{
+            margin-bottom: 10px;
+        }
+        .card p, .card h4{
+           margin-bottom: 5px;
+        }
+        .card span{
+            font-weight: bold;
+        }
+        .card > div{
+            margin-bottom: 0 !important;
+        }
+        .card h4{
+            color: #F78536;
+        }
+    </style>
 
 </head>
 <body>
@@ -60,7 +76,7 @@
                             <div class="top-contact-info">
                                 <ul class="row">
                                     <li class=" col-md-5" ></li>
-                                    <li class=" col-md-3 toolbar-email" style="padding-left: 0px; text-align: right "><i class="fa fa-envelope-o"></i><span style="font-family: Roboto"> utilisateur@email.com</span></li>
+                                    <li class=" col-md-3 toolbar-email" style="padding-left: 0px;"><i class="fa fa-envelope-o"></i><span style="font-family: Roboto"> utilisateur@email.com</span></li>
                                     <li class="col-md-2"><a class="toolbar-new-listing" href="#"><i class="fa fa-bullhorn"></i><span style="font-family: Roboto; color: white; font-size: .9em"> Mes annonces</span></a></li>
                                     <li class="col-md-2"><a class="toolbar-new-listing2" href="#"><i class="fa fa-user"></i> <span style="font-family: Roboto; color: rgba(0,0,0,0.85); font-size: .9em">Déconnexion</span></a></li>
                                 </ul>
@@ -82,7 +98,7 @@
                             <li class="active">
                                 <a href="index-2.html">
                                     <i class="fa fa-home" style="display: block; text-align: center"></i>
-                                    Acceuil</a>
+                                    Accueil</a>
                             </li>
                             <li>
                                 <a href="#" class="delcd-sub-ddown">
@@ -133,15 +149,19 @@
         <button type="button" class="btn btn-primary" style="
     position: fixed;
     z-index: 99999;
-    font-size: 33px;
+    font-size: 10px;
     border-radius: 50%;
     width: 80px;
     height: 80px;
     bottom: 10px;
     right: 10px;
+    text-align: center;
+    font-variant: normal;
+    font-family: Roboto;
+    background-color: #495057;
     box-shadow: 0 3px 19px 0 rgba(0, 0, 0, .12), 0 2px 2px 0 rgba(0, 0, 0, .24);
 ">
-            <i class="material-icons fa fa-plus"></i>
+            Ajouter<br><span style="font-size: 14px; color: white; font-weight: bolder;margin: 0">+</span><br>Annonce
         </button>
 
 
@@ -210,7 +230,7 @@
                                                 <div class="slidecontainer col-lg-12 ">
                                                     <div class="center-text">
                                                         <label id="demo"></label>
-                                                        <label>DZD</label>
+                                                        <label>DA</label>
                                                     </div>
                                                     <input type="range" min="5000" max="50000" value="5000" class="slider" id="myRange">
                                                 </div>
@@ -330,23 +350,25 @@
                     <!-- start one aff -->
                     <div class="container">
 
-                        <div class="row">
+                        <div class="row card">
                             <div class="feature-full-1col animate-box">
                                 <div class="image" style="background-image: url(../images/medium/mountain/pexels-photo-307008.jpg);"></div>
-                                <div class="desc row" style="padding-top: 0px; padding-bottom: 0px; ">
+                                <div class="desc row" style="padding-top: 5px; padding-bottom: 0px; ">
                                     <div class="col-lg-8">
-                                        <h3>Voyage en Turquie</h3>
+                                        <h4>Voyage en Turquie</h4>
                                         <p></p>
-                                        <p>Lieu : Ankara</p>
-                                        <p>Durée : 8 jours / 7 nuits</p>
-                                        <p>Pellentesque habitant morbi tristique senectus et netus ett mauada fames ac turpis egestaa.</p>
-                                        <p style="margin-bottom: 5px;"> Prix : 100000 DZD</p>
+                                        <p><span>Lieu :</span> Ankara</p>
+                                        <p><span>Durée :</span> 8 jours / 7 nuits</p>
+                                        <br>
+                                        <p>Pellentesque habitant morbi tristique senectus et netus ett mauada fames ac turpis egestaa...</p>
+                                        <p style="margin-bottom: 5px;"><span> Prix :</span> 100000 DA    <p style="width: 100%; text-align: right"><span>le: </span> 12/01/2018</p></p>
                                     </div>
                                     <div class="col-lg-4 border-left" style="padding-top: 10px; text-align: center">
                                         <h4 style="color: gray">Actions</h4>
+                                        <hr>
                                         <p style="margin-bottom: 8px">
                                             <a href="blog-detail.html" class="btn btn-primary btn-luxe-primary color-blue fa fa-eye"
-                                            style="width: 120px;  background-color:dodgerblue; "><span style=" font-size:0.7em; font-family: Roboto; color: white; margin-left: 2px">Afficher</span>
+                                            style="width: 120px;  background-color:#999; "><span style=" font-size:0.7em; font-family: Roboto; color: white; margin-left: 2px">Afficher</span>
                                                 <i class="ti-angle-right"></i>
                                             </a>
                                         </p>
@@ -363,7 +385,7 @@
                                             </a>
                                         </p>
                                         <p style="width: 100%; text-align: center">
-                                            <span class="fa fa-eye" style="display: block; font-size: 22px;"> 2000/mois</span>
+                                            <span class="fa fa-eye" style="display: block; font-size: 22px; font-weight: normal; margin-top: 14px;"> 600/mois</span>
                                         </p>
                                     </div>
 
@@ -372,23 +394,24 @@
 
                         </div>
 
-                        <div class="row">
+                        <div class="row card">
                             <div class="feature-full-1col animate-box">
                                 <div class="image" style="background-image: url(../images/medium/mountain/pexels-photo-307008.jpg);"></div>
-                                <div class="desc row" style="padding-top: 0px; padding-bottom: 0px; ">
+                                <div class="desc row" style="padding-top: 5px; padding-bottom: 0px; ">
                                     <div class="col-lg-8">
-                                        <h3>Voyage en Lebanon</h3>
+                                        <h4>Voyage en Lebanon</h4>
                                         <p></p>
-                                        <p>Lieu : Bairut</p>
-                                        <p>Durée : 10 jours / 1 nuit</p>
-                                        <p>Pellentesque habitant morbi tristique senectus et netus ett mauada fames ac turpis egestaa.</p>
-                                        <p style="padding-bottom: 5px;"> Prix : 20000.00 DZD</p>
+                                        <p><span>Lieu :</span> Bairut</p>
+                                        <p><span>Durée :</span> 10 jours / 1 nuit</p>
+                                        <br>
+                                        <p>Pellentesque habitant morbi tristique senectus et netus ett mauada fames ac turpis egestaa....</p>
+                                        <p style="margin-bottom: 5px;"><span> Prix :</span> 50000 DA    <p style="width: 100%; text-align: right"><span>le: </span> 01/01/2018</p></p>
                                     </div>
                                     <div class="col-lg-4 border-left" style="padding-top: 10px; text-align: center">
-                                        <h4 style="color: gray">Actions</h4>
+                                        <h4 style="color: gray">Actions</h4><hr>
                                         <p style="margin-bottom: 8px">
                                             <a href="blog-detail.html" class="btn btn-primary btn-luxe-primary color-blue fa fa-eye"
-                                               style="width: 120px;  background-color:dodgerblue; "><span style=" font-size:0.7em; font-family: Roboto; color: white; margin-left: 2px">Afficher</span>
+                                               style="width: 120px;  background-color:#999; "><span style=" font-size:0.7em; font-family: Roboto; color: white; margin-left: 2px">Afficher</span>
                                                 <i class="ti-angle-right"></i>
                                             </a>
                                         </p>
@@ -405,7 +428,7 @@
                                             </a>
                                         </p>
                                         <p style="width: 100%; text-align: center">
-                                            <span class="fa fa-eye" style="display: block; font-size: 22px;"> 2000/mois</span>
+                                            <span class="fa fa-eye" style="display: block; font-size: 22px; font-weight: normal; margin-top: 14px"> 750/mois</span>
                                         </p>
                                     </div>
 
@@ -414,23 +437,24 @@
 
                         </div>
 
-                        <div class="row">
+                        <div class="row card">
                             <div class="feature-full-1col animate-box">
                                 <div class="image" style="background-image: url(../images/medium/mountain/pexels-photo-307008.jpg);"></div>
-                                <div class="desc row" style="padding-top: 0px; padding-bottom: 0px; ">
+                                <div class="desc row" style="padding-top: 5px; padding-bottom: 0px; ">
                                     <div class="col-lg-8">
-                                        <h3>Voyage en Lebanon</h3>
+                                        <h4>Voyage en Lebanon</h4>
                                         <p></p>
-                                        <p>Lieu : Bairut</p>
-                                        <p>Durée : 10 jours / 1 nuit</p>
+                                        <p><span>Lieu :</span> Bairut</p>
+                                        <p><span>Durée :</span> 10 jours / 1 nuit</p>
+                                        <br>
                                         <p>Pellentesque habitant morbi tristique senectus et netus ett mauada fames ac turpis egestaa.</p>
-                                        <p style="padding-bottom: 5px;"> Prix : 20000.00 DZD</p>
+                                        <p style="margin-bottom: 5px;"><span> Prix :</span> 20000 DA    <p style="width: 100%; text-align: right"><span>le: </span> 01/12/2017</p></p>
                                     </div>
                                     <div class="col-lg-4 border-left" style="padding-top: 10px; text-align: center">
-                                        <h4 style="color: gray">Actions</h4>
+                                        <h4 style="color: gray">Actions</h4><hr>
                                         <p style="margin-bottom: 8px">
                                             <a href="blog-detail.html" class="btn btn-primary btn-luxe-primary color-blue fa fa-eye"
-                                               style="width: 120px;  background-color:dodgerblue; "><span style=" font-size:0.7em; font-family: Roboto; color: white; margin-left: 2px">Afficher</span>
+                                               style="width: 120px;  background-color:#999; "><span style=" font-size:0.7em; font-family: Roboto; color: white; margin-left: 2px">Afficher</span>
                                                 <i class="ti-angle-right"></i>
                                             </a>
                                         </p>
@@ -447,7 +471,7 @@
                                             </a>
                                         </p>
                                         <p style="width: 100%; text-align: center">
-                                            <span class="fa fa-eye" style="display: block; font-size: 22px;"> 2000/mois</span>
+                                            <span class="fa fa-eye" style="display: block; font-size: 22px; font-weight: normal;margin-top: 14px"> 2000/mois</span>
                                         </p>
                                     </div>
 
