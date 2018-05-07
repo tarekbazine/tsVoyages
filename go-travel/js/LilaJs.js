@@ -12,4 +12,8 @@ $(document).ready(function(){
             $(this).val("");
         }
     });
+  $("#categorie li a").click(function(){
+       $("a.selectedCat").removeClass("selectedCat");
+        $(this).addClass("selectedCat");
+  });
 });
