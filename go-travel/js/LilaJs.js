@@ -23,6 +23,8 @@ $(document).ready(function(){
 });
 
 function holdForm(){
+    $("#dateDebut").removeClass("error");
+    $("#dateFin").removeClass("error");
     debut=$("#formulaireAjout input[placeholder=\"Date début\"]").val();
     fin=$("#formulaireAjout input[placeholder=\"Date fin\"]").val();
     d=new Date();
@@ -38,6 +40,10 @@ function holdForm(){
         $("#formulaireAjout")[0].reset();
     }
     else {
-       $("#failAdd").fadeTo(2000, 500);
+       $("#failAdd").fadeTo(2000, 500).slideUp(500, function(){
+        $("#failAdd").slideUp(1000);
+    });
+       $("#dateDebut").addClass("error");
+       $("#dateFin").addClass("error");
     }
 }
