@@ -22,6 +22,10 @@
     color: #F78536;
 }
 
+.tabulation input[type="text"]::-webkit-input-placeholder {
+    color: #8a8888;
+}
+
 .tabulation .form-control{
     background: rgba(0, 0, 0, 0.05);
     border: none;
@@ -63,4 +67,20 @@
 {.feature-full-1col .image {
     height: 100%;
 }}
+
+.mdp{
+        color: #f79049;
+    padding: 10px;
+   
+
+}
+
+#mdp_oublie:hover{
+    color: #8a8888;
+}
+
+label.erreur{
+    color: red;
+    font-weight: bold ;
+}
 
