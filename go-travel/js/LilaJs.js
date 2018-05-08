@@ -16,7 +16,10 @@ $(document).ready(function(){
        $("a.selectedCat").removeClass("selectedCat");
         $(this).addClass("selectedCat");
   });
-  
+  $("#formulaireAjout").submit(function(e) {
+    e.preventDefault();
+});
+
 });
 
 function holdForm(){
