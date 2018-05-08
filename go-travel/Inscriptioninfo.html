@@ -139,7 +139,7 @@
 			
 								<!-- start tab filtres populaires -->
 								<div class="tab-pane active" id="flights">
-									<form>
+									<form id="inscription_info">
 										<!-- start destination -->
 										<div class="form-row">
 											<div class="col-sm-12" style="text-align: center">
@@ -149,25 +149,38 @@
 											<div class="col-sm-12">
 												<div class="form-group">
 													<label>Nom</label>
-													<input type="text" class="form-control from-place" placeholder="Nom" />
+													<input type="text" class="form-control from-place" placeholder="Nom"
+														   required
+														   oninvalid="this.setCustomValidity('Veuillez introduire votre nom')"
+														   oninput="setCustomValidity('')"
+													/>
 												</div>
 											</div>
 											<div class="col-sm-12">
 												<div class="form-group">
 													<label>Prénom</label>
-													<input type="text" class="form-control from-place" placeholder="Prénom" />
+													<input type="text" class="form-control from-place" placeholder="Prénom"
+														   required
+														   oninvalid="this.setCustomValidity('Veuillez introduire votre prénom')"
+														   oninput="setCustomValidity('')"/>
 												</div>
 											</div>
 											<div class="col-sm-12">
 												<div class="form-group">
 													<label>Nom d'utilisateur</label>
-													<input type="text" class="form-control from-place" placeholder="Nom d'utilisateur" />
+													<input type="text" class="form-control from-place" placeholder="Nom d'utilisateur"
+														   required
+														   oninvalid="this.setCustomValidity('Veuillez introduire un nom d\'utilisateur')"
+														   oninput="setCustomValidity('')"/>
 												</div>
 											</div>
 											<div class="col-sm-12">
 												<div class="form-group">
 													<label>Date de naissance</label>
-													<input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy" />
+													<input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy"
+                                                           required
+                                                           oninvalid="this.setCustomValidity('Veuillez introduire votre date de naissance')"
+                                                           oninput="setCustomValidity('')"/>
 												</div>
 											</div>
 											<div class="col-sm-12">
@@ -197,19 +210,19 @@
 													<div class="form-group">
 														<label>Vous êtes </label>
 														<div class="form-check">
-															<input type="checkbox" class="form-check-input" id="exampleCheck1">
+															<input type="checkbox" class="form-check-input" id="exampleCheck1" required>
 															<label class="form-check-label" for="exampleCheck1">Voyageur</label>
 														</div>
 														<div class="form-check">
-															<input type="checkbox" class="form-check-input" id="exampleCheck1">
+															<input type="checkbox" class="form-check-input" id="exampleCheck2">
 															<label class="form-check-label" for="exampleCheck1">Agent de voyage</label>
 														</div>
 														<div class="form-check">
-															<input type="checkbox" class="form-check-input" id="exampleCheck1">
+															<input type="checkbox" class="form-check-input" id="exampleCheck3">
 															<label class="form-check-label" for="exampleCheck1">Locataire de vacances</label>
 														</div>
 														<div class="form-check">
-															<input type="checkbox" class="form-check-input" id="exampleCheck1">
+															<input type="checkbox" class="form-check-input" id="exampleCheck4">
 															<label class="form-check-label" for="exampleCheck1">Locataire de voiture</label>
 														</div>
 													</div>
@@ -224,7 +237,7 @@
 												<input type="submit" class="btn btn-primary btn-block" value="Confirmer">
 											</div>
 											<div class="col-lg-6">
-												<input type="submit" class="btn btn-primary btn-block btn-grey" value="Annuler">
+												<input type="button" id="annuler_info"class="btn btn-primary btn-block btn-grey" value="Annuler">
 											</div>
 										</div>
 			
@@ -421,7 +434,7 @@
 		
 		<!-- Main JS -->
 		<script src="js/main.js"></script>
-		<script src="js/categorie.js"></script>
+		<script src="js/inscription.js"></script>
 
 
 		

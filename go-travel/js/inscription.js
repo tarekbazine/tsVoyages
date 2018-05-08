@@ -19,5 +19,14 @@ $(document).ready(function () {
 
     $("#annuler_inscription").click(function () {
         window.location.replace("file:///E:/IHMPrototype/go-travel/index.html");
+    });
+
+    $("#inscription_info").submit(function (e) {
+        e.preventDefault()
+        window.location.replace("file:///E:/IHMPrototype/go-travel/index.html");
+    });
+
+    $("#annuler_info").click(function () {
+        window.location.replace("file:///E:/IHMPrototype/go-travel/index.html");
     })
 });
