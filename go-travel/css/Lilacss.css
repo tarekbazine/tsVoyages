@@ -89,7 +89,7 @@
     border-radius: 10%;
     height: 60px;
     width:60px;
-    margin: 15px;
+    margin: auto;
 }
 .upload-div{
     text-align: center;
@@ -193,4 +193,35 @@
     display: none;
     width: 500px;
     z-index: 500;
+}
+
+
+.fileContainer [type=file] {
+    cursor: inherit;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    width: 68px;
+    opacity: 0;
+    position: absolute;
+    text-align: right;
+    top: 0;
+}
+
+.fileContainer,.pdfContainer{
+    cursor: pointer;
+}
+.pdfContainer{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+}
+div.pdfContainer [type=file]{
+    cursor: inherit;
+    filter: alpha(opacity=0);
+    height: 60px;
+    width: 60px;
+    opacity: 0;
+    position: relative;
+    text-align: right;
+    top: -60px;
 }
