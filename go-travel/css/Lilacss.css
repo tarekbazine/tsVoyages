@@ -211,10 +211,30 @@
 .fileContainer,.pdfContainer{
     cursor: pointer;
 }
+.fileContainer{
+    background-color: rgba(94, 92, 92, 0.322);
+    padding: 17px;
+    border: dashed 2px white;
+}
+.fileContainer img{
+    height: 40px;
+    width: 40px;
+}
+.fileContainer:hover img{
+    content:url("../../images/icon/add.png");
+}
+.fileContainer:hover{
+    background-color:#F78536;
+}
 .pdfContainer{
     width: 60px;
     height: 60px;
     margin: auto;
+    background-color: rgb(94, 92, 92);
+    border-radius: 10%;
+}
+.pdfContainer:hover{
+    background-color: #F78536;
 }
 div.pdfContainer [type=file]{
     cursor: inherit;
