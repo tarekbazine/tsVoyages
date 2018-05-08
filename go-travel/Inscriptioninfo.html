@@ -210,7 +210,10 @@
 													<div class="form-group">
 														<label>Vous êtes </label>
 														<div class="form-check">
-															<input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+															<input type="checkbox" class="form-check-input" id="exampleCheck1"
+                                                                   oninvalid="this.setCustomValidity('Veuillez choisir au moins un rôle')"
+                                                                   oninput="setCustomValidity('')"
+                                                                   required>
 															<label class="form-check-label" for="exampleCheck1">Voyageur</label>
 														</div>
 														<div class="form-check">
