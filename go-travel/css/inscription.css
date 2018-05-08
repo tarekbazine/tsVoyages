@@ -26,6 +26,11 @@
     color: #8a8888;
 }
 
+.tabulation input[type="email"]::-webkit-input-placeholder {
+    color: #8a8888;
+}
+
+
 .tabulation .form-control{
     background: rgba(0, 0, 0, 0.05);
     border: none;
