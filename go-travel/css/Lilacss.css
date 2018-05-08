@@ -170,3 +170,27 @@
     border-width: 4px;
     background: #007780;
 }
+
+.form-group input[placeholder="Etat/ ville"]{
+    height: 38px !important
+}
+
+#formulaireAjout .form-group{
+    margin-bottom: 5px;
+}
+#successAdd{
+    position: fixed;
+    bottom: 5px;
+    right:5px;
+    display: none;
+    width: 350px;
+    z-index: 500;
+}
+#failAdd{
+    position: fixed;
+    bottom: 5px;
+    right:5px;
+    display: none;
+    width: 500px;
+    z-index: 500;
+}

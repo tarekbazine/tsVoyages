@@ -16,4 +16,25 @@ $(document).ready(function(){
        $("a.selectedCat").removeClass("selectedCat");
         $(this).addClass("selectedCat");
   });
+  
 });
+
+function holdForm(){
+    debut=$("#formulaireAjout input[placeholder=\"Date début\"]").val();
+    fin=$("#formulaireAjout input[placeholder=\"Date fin\"]").val();
+    d=new Date();
+    arrayDebut=debut.split("-");
+    arrayFin=fin.split("-");
+    d.setFullYear(arrayDebut[0],arrayDebut[1],arrayDebut[2]);
+    df=new Date();
+    df.setFullYear(arrayFin[0],arrayFin[1],arrayFin[2]);
+    if(df>d){
+        $("#successAdd").fadeTo(2000, 500).slideUp(500, function(){
+            $("#successAdd").slideUp(700);
+        });
+        $("#formulaireAjout")[0].reset();
+    }
+    else {
+       $("#failAdd").fadeTo(2000, 500);
+    }
+}
