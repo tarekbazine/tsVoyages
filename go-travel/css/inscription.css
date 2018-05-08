@@ -89,3 +89,10 @@ label.erreur{
     font-weight: bold ;
 }
 
+#photo_profil{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+

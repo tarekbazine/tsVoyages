@@ -29,4 +29,25 @@ $(document).ready(function () {
     $("#annuler_info").click(function () {
         window.location.replace("file:///E:/IHMPrototype/go-travel/index.html");
     })
+
+    $("#photo_profil").click(function () {
+        $("#url_photo").trigger('click');
+    });
+
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#photo_profil').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#url_photo").change(function(){
+        readURL(this);
+    });
 });
