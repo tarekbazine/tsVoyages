@@ -2241,6 +2241,20 @@ span.comment i {
   border: 2px solid #F78536;
 }
 
+
+.btn.btn-outline-dark {
+  background: transparent;
+  color: #848080;
+  border: 2px solid #848080;
+}
+
+.btn.btn-outline-dark:hover, 
+.btn.btn-outline-dark:focus, 
+.btn.btn-outline-dark:active {
+  background: #706e6e;
+  color: #fff;
+  border: 2px solid #706e6e;
+}
 /*-- tab panel button --*/
 .tab-content .btn {
   letter-spacing: 0;
@@ -2448,4 +2462,6 @@ footer .form-control {
 
 }
 
-desc row
+footer li{
+  color: white !important;
+}

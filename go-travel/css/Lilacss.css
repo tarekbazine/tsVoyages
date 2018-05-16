@@ -89,10 +89,11 @@
     border-radius: 10%;
     height: 60px;
     width:60px;
-    margin: 15px;
+    margin: auto;
 }
 .upload-div{
     text-align: center;
+    margin-bottom: 10px;
 }
 
 #selected-cat{
@@ -110,4 +111,143 @@
 #download-prgme{
     width: 100%;
     text-align: center;
+}
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: rgb(255, 187, 0);  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: rgb(255, 216, 133);  } 
+
+#maps{
+    margin-top: 6.5em;
+    
+    margin-left: 4px;
+    margin-right: 4px;
+}
+#maps>iframe{
+    width: 100%;
+    height: 400px;
+}
+
+#categorie>ul>li>div>a:hover img{
+    transform: scale(1.2);
+}
+.selectedCat img{
+    transform: scale(1.2);
+    border-width: 4px;
+    background: #007780;
+}
+
+.form-group input[placeholder="Etat/ ville"]{
+    height: 38px !important
+}
+
+#formulaireAjout .form-group{
+    margin-bottom: 5px;
+}
+#successAdd{
+    position: fixed;
+    bottom: 5px;
+    right:5px;
+    display: none;
+    width: 350px;
+    z-index: 500;
+}
+#failAdd{
+    position: fixed;
+    bottom: 5px;
+    right:5px;
+    display: none;
+    width: 500px;
+    z-index: 500;
+}
+
+
+.fileContainer [type=file] {
+    cursor: inherit;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    width: 68px;
+    opacity: 0;
+    position: absolute;
+    text-align: right;
+    top: 0;
+}
+
+.fileContainer,.pdfContainer{
+    cursor: pointer;
+}
+.fileContainer{
+    background-color: rgba(94, 92, 92, 0.322);
+    padding: 17px;
+    border: dashed 2px white;
+}
+.fileContainer img{
+    height: 40px;
+    width: 40px;
+}
+.fileContainer:hover img{
+    content:url("../../images/icon/add.png");
+}
+.fileContainer:hover{
+    background-color:#F78536;
+}
+.pdfContainer{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    background-color: rgb(94, 92, 92);
+    border-radius: 10%;
+}
+.pdfContainer:hover{
+    background-color: #F78536;
+}
+div.pdfContainer [type=file]{
+    cursor: inherit;
+    filter: alpha(opacity=0);
+    height: 60px;
+    width: 60px;
+    opacity: 0;
+    position: relative;
+    text-align: right;
+    top: -60px;
+}
+
+.error
+{
+ border:1px solid red !important;
 }

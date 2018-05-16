@@ -129,18 +129,26 @@
 
 		<div id="delcd-contact" class="delcd-section-gray">
 			<div class="container">
-				
+				<div id="successAdd" class="alert alert-success alert-dismissable">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+							Annonce ajoutée avec succès.
+				</div>
+				<div id="failAdd" class="alert alert-warning alert-dismissable">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+							La date de début doit être postérieure à la date de fin.
+				</div>
 				<!-- start subheading -->
 				<div class="row">
 					<div class="col-md-8 offset-md-2 text-center heading-section">
 						<h3>Ajouter une annonce</h3>
 						<p>Mettez en avant votre annonce en précisant le plus de détails sur votre offre</p>
 					</div>
+
 				</div>
 				<!-- end subheading -->
 				
 				<!-- start form -->
-				<form action="#">
+				<form id="formulaireAjout"  onsubmit="return holdForm()" >
 					<div class="row">
 						
 						<!-- start contact form -->
@@ -152,20 +160,26 @@
 												<ul>
 													<li>
 														<div>
-															<img class="img-cat" id="selected-cat" src="../images/icon/dark_flight.png"/>
-															<h3 id="nom-cat-selected">Voyage</h3>
+															<a href="#" class="selectedCat">
+																<img class="img-cat"  src="../images/icon/flight.png"/>
+																<h3 id="nom-cat">Voyage</h3>
+															</a>
 														</div>
 													</li>
 													<li>
 														<div>
-															<img class="img-cat" src="../images/icon/car.png"/>
-															<h3 id="nom-cat">Voiture</h3>
+															<a href="#">
+																<img class="img-cat" src="../images/icon/car.png"/>
+																<h3 id="nom-cat">Voiture</h3>
+															</a>
 														</div>
 													</li>
 													<li>
 															<div>
-																<img class="img-cat" src="../images/icon/home.png"/>
-																<h3 id="nom-cat">Maison</h3>
+																<a href="#">
+																	<img class="img-cat" src="../images/icon/home.png"/>
+																	<h3 id="nom-cat">Maison</h3>
+																</a>
 															</div>
 														</li>
 												</ul>
@@ -173,39 +187,66 @@
 										</div>
 								<div class="col-md-6">
 									<div class="form-group">
-											<label>Date de début</label>
-										<input type="date" class="form-control" placeholder="Date début" required>
+											<label>Date de début de l'offre*</label>
+										<input id="dateDebut" type="date" class="form-control" placeholder="Date début" required>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Date de fin</label>
-										<input type="date" class="form-control" placeholder="Date fin" required>
+										<label>Date de fin de l'offre*</label>
+										<input id="dateFin" type="date" class="form-control" placeholder="Date fin" required>
 									</div>
 								</div>
 								<div class="col-md-6">
 										<div class="form-group">
-											<label>Pays</label>
-											<input type="text" class="form-control" placeholder="Pays" required>
+											<label>Pays*</label>
+											<select class="form-control" required>
+												<option selected>Algérie</option>
+												<option>Tunisie</option>
+												<option>Maroc</option>
+												<option>Italie</option>
+												<option>Turquie</option>
+												<option>France</option>
+											</select>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Ville</label>
-											<input type="text" class="form-control" placeholder="Etat/ ville" required>
+											<input type="text" class="form-control" placeholder="Etat/ ville">
 										</div>
 									</div>
-								<div class="col-md-12">
+								<div class="col-md-8 col-sm-12">
 										<div class="form-group">
-												<label>Durée</label>
-											<input type="number" placeholder="Durée. ex: 10jous" class="form-control" required>
+												<label>Durée*</label>
+											<input type="number" placeholder="ex: 10" min="1" class="form-control" required>
 										</div>
 								</div>
-								<div class="col-md-12">
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Granule</label>
+										<select class="form-control" required>
+											<option selected>Jours</option>
+											<option>Semaines</option>
+											<option>Mois</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-8 col-sm-12">
 										<div class="form-group">
-												<label>Prix</label>
-											<input type="number" placeholder="Prix (DZD)" class="form-control" required>
+												<label>Prix*</label>
+											<input type="number" min="1" placeholder="Prix" class="form-control" required>
 										</div>
+								</div>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Monnaie</label>
+										<select class="form-control" required>
+											<option selected>DZD</option>
+											<option>EUR</option>
+											<option>USD</option>
+										</select>
+									</div>
 								</div>
 								<div class="col-md-12">
 										<div class="form-group">
@@ -213,6 +254,9 @@
 											<select class="form-control">
 												<option>Bus</option>
 												<option>Avion</option>
+												<option>Train</option>
+												<option>Bateau</option>
+												<option selected>Ne pas indiquer</option>
 											</select>
 										</div>
 								</div>
@@ -220,9 +264,14 @@
 										<div class="col-md-12 col-sm-12 slider-button">
 											<h5 id="charger-img">Charger des images</h5>
 											<ul class="list-inline">
-												<li class="list-inline-item"><img data-target="#carouselExampleIndicators" data-slide-to="1" src="../images/medium/europe/europe-2.jpg" alt="" /></li>
-												<li class="list-inline-item"><img data-target="#carouselExampleIndicators" data-slide-to="2" src="../images/icon/add.png" alt="" /></li>
-												</ul>
+												<li class="list-inline-item"><img  src="../images/medium/europe/europe-2.jpg" alt="" /></li>
+												<li class="list-inline-item">
+													<div class=" fileContainer">
+														<img   src="../images/icon/pictures.png" alt="" />
+														<input type="file" name="file"/>
+													</div>
+												</li>	
+											</ul>
 										</div>
 										
 									</div>
@@ -230,18 +279,22 @@
 											<div class="form-group ">
 												<h5 id="charger-img">Charger le programme du séjour</h5>
 												<div class="upload-div">
-													<img id="upload" src="../images/icon/upload.png" />
+													<div  class="pdfContainer">
+															<img id="upload" src="../images/icon/upload.png" />
+															<input type="file" name="file"/>
+													</div>
+													
 												</div>
 											</div>
 										</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea name="txt-area" class="form-control" id="txt-area" cols="30" rows="7" placeholder="Decription" required></textarea>
+										<textarea name="txt-area" class="form-control" id="txt-area" cols="30" rows="7" placeholder="Decription" ></textarea>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<input type="submit" value="Ajouter" class="btn btn-primary">
+										<input type="submit" value="Ajouter" id="AjouterAnnonce" class="btn btn-primary">
 									</div>
 								</div>
 							</div>
@@ -428,6 +481,8 @@
 		
 		<!-- Main JS -->
 		<script src="js/main.js"></script>
+		
+		<script src="js/LilaJs.js"></script>
 
 	</body>
 

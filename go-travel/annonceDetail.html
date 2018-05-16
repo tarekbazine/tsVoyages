@@ -55,7 +55,7 @@
 								<div class="top-contact-info">
 									<ul class="row">
 										<li class=" col-md-5" ></li>
-										<li class=" col-md-3 toolbar-email" style="padding-left: 0px; "><i class="fa fa-envelope-o"></i><span style="font-family: Roboto"> utilisateur@email.com</span></li>
+										<li class=" col-md-3 toolbar-email" style="padding-left: 0px; text-align: right "><i class="fa fa-envelope-o"></i><span style="font-family: Roboto"> utilisateur@email.com</span></li>
 										<li class="col-md-2"><a class="toolbar-new-listing" href="#"><i class="fa fa-bullhorn"></i><span style="font-family: Roboto; color: white; font-size: .9em"> Mes annonces</span></a></li>
 										<li class="col-md-2"><a class="toolbar-new-listing2" href="#"><i class="fa fa-user"></i> <span style="font-family: Roboto; color: rgba(0,0,0,0.85); font-size: .9em">Déconnexion</span></a></li>
 									</ul>
@@ -123,20 +123,64 @@
 					</div>
 				</div>
 			</header>
-		<!-- end header-top -->
 	
 		
 			<!-- end header cover img -->
 			
-		<div class="row">
-			<img src="../images/large/map/Venise.jpg" class="col-md-12" id="map"/>
+		<div class="row" id="maps">
+			<iframe
+				frameborder="0" style="border:0"
+				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB3BU_n_r6a3xQW9Y8K7SC70OYwgk2H1M8
+					&q=Space+Needle,Seattle+WA" allowfullscreen>
+			</iframe>
 		</div>
 		
 		<div id="delcd-blog-section" class="delcd-section-gray">
 			
 			<div class="container">
 				
-			
+			<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLongTitle">Contacter par mail</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+					<div class="row">
+							<div class="col-md-12">
+								<div class="md-form">
+									<label for="subject" class="">Sujet</label>
+									<input type="text" id="subject" name="subject" class="form-control">
+								</div>
+							</div>
+						</div>
+						<!--Grid row-->
+
+						<!--Grid row-->
+						<div class="row">
+
+							<!--Grid column-->
+							<div class="col-md-12">
+
+								<div class="md-form">
+									<label for="message">Votre message</label>
+									<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+								</div>
+
+							</div>
+						</div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-secondary btn-outline-dark"  data-dismiss="modal">Annuler</button>
+			  <button type="button" class="btn btn-primary btn-outline">Envoyer</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
 			
 				<div class="row">
 				
@@ -217,98 +261,7 @@
 													</div>
 												</div>
 											</div>
-													
 												
-						<!-- 
-						<div class="row" id="box">
-							<div class="col-sm-12">
-								<div class="car tour-price" id="price-box">
-									<div class="one-4 " id="lila-price-tag-left">
-										<h3>Pays</h3>
-									</div>
-									<div class="one-1" id="lila-price-tag-right">
-										<h3>Italie</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="car tour-price" id="price-box">
-									<div class="one-4 " id="lila-price-tag-left">
-										<h3>Ville</h3>
-									</div>
-									<div class="one-1" id="lila-price-tag-right">
-										<h3>Venise</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="car tour-price" id="price-box">
-									<div class="one-4 " id="lila-price-tag-left">
-										<h3>Durée</h3>
-									</div>
-									<div class="one-1" id="lila-price-tag-right">
-										<h3>10 jours</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-md-12">
-								<form>
-									<div class="form-row">										  
-										<div class="col-sm-6">
-											<div class="car tour-price" id="price-box">
-												<div class="one-4 " id="lila-price-tag-left">
-													<h3>Du</h3>
-												</div>
-												<div class="one-1" id="lila-price-tag-right">
-													<h3>10-07-2018</h3>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6">
-											<div class="car tour-price" id="price-box">
-												<div class="one-4 " id="lila-price-tag-left">
-													<h3>Au</h3>
-												</div>
-												<div class="one-1" id="lila-price-tag-right">
-													<h3>10-08-2018</h3>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-											-->
-
-						<!-- start date & age 
-						<div class="row">
-							<div class="col-md-12">
-								<form>
-									<div class="form-row">										  
-										<div class="col-sm-6">
-											 <div class="form-group">
-												<label>Date:</label>
-												<input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
-											 </div>
-										</div>
-										<div class="col-sm-6">
-											 <div class="form-group">
-												<label>Age:</label>
-												<input type="text" class="form-control" placeholder="your age"/>
-											 </div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>-->
-						<!-- end date & age -->
 						
 						<!-- cart button -->
 					
@@ -361,7 +314,7 @@
 					</div>
 					<div class="row">
 							<div id="tour-cart-btn" class="col-md-4 col-sm-12">
-								<a class="btn btn-primary btn-outline btn-lg" href="#">Contacter l'annonceur <i class="icon-arrow-right22"></i></a>
+								<a class="btn btn-primary btn-outline btn-lg" data-toggle="modal" data-target="#exampleModalCenter" href="#">Contacter l'annonceur <i class="icon-arrow-right22"></i></a>
 							</div>
 							
 						</div>
@@ -374,7 +327,7 @@
 				
 					
 						<div id="tour-cart-btn" class="col-md-4 col-sm-12">
-							<a class="btn btn-primary btn-outline btn-lg" href="#">Voir le programme du séjour <i class="icon-arrow-right22"></i></a>
+							<a class="btn btn-primary btn-outline btn-lg" href="pdfViewer.html"  target="_blank">Voir le programme du séjour <i class="icon-arrow-right22"></i></a>
 						</div>
 						
 					</div>
@@ -408,7 +361,35 @@
 							</div>
 							
 							<div class="tab-pane" id="reviews">
+								<div id="CommentUser">
+								<div class="row">
+									<img src="https://randomuser.me/api/portraits/women/90.jpg" id="image-rounded-comment"/>
+									<div class="name-comment col-md-8 ">
+											<h4>Lila BOUALILI</h4>
+									</div>
+								</div>
+								<ul class="list-inline">
 								
+									<li class="list-inline-item">
+										<fieldset class="rating">
+											<input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+											<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+											<input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+											<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+											<input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+											<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+											<input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+											<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+											<input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+											<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+										</fieldset>
+									</li>
+									<div class="form-group">
+										<input type="text" id="enterComment" class="form-control" placeholder="Commentaire..." required>
+									</div>
+									</li>
+								</ul>
+							</div>
 									<!-- first review -->
 								<div class="row">
 										<img src="https://randomuser.me/api/portraits/women/32.jpg" id="image-rounded-comment"/>
@@ -668,6 +649,7 @@
 	<!-- END delcd-wrapper -->
 
 		<!-- Modernizr JS -->
+
 		<script src="js/modernizr-3.6.0.min.js"></script>
 		
 		<!-- jQuery -->
@@ -697,6 +679,8 @@
 		
 		<!-- Main JS -->
 		<script src="js/main.js"></script>
+	
+		<script src="js/LilaJs.js"></script>
 
 	</body>
 
