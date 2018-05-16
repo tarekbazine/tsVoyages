@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#enterComment").on('keyup', function (e) {
-        if (e.keyCode == 13) {
+        if (e.keyCode == 13 && $(this).val()!="") {
             var d = new Date();
 
             var month = d.getMonth()+1;
