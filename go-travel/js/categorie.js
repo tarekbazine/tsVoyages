@@ -7,6 +7,9 @@ $(document).ready(function () {
     slider.oninput = function () {
         output.innerHTML = this.value;
     }
+
+    var dest = localStorage.getItem('dest');
+    $("#destLabel").val(dest);
 });
 
 

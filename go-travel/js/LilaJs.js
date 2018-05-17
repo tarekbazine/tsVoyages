@@ -14,7 +14,7 @@ $(document).ready(function(){
     });
   $("#categorie li a").click(function(){
        $("a.selectedCat").removeClass("selectedCat");
-        $(this).addClass("selectedCat");
+       $(this).addClass("selectedCat");
   });
   $("#formulaireAjout").submit(function(e) {
     e.preventDefault();

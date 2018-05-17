@@ -153,8 +153,6 @@
 .rating > input:checked ~ label:hover ~ label { color: rgb(255, 216, 133);  } 
 
 #maps{
-    margin-top: 6.5em;
-    
     margin-left: 4px;
     margin-right: 4px;
 }

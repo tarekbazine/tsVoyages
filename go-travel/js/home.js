@@ -4,6 +4,10 @@ $(document).ready(function(){
 
 
 });
+function  toCategorie(a){
+    var destinationName = a.textContent;
+    localStorage.setItem('dest', destinationName)
+}
 
 function myFunction2(num , element) {
     if (num == 0){
