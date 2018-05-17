@@ -35,6 +35,7 @@
     <style>
         .card{
             margin-bottom: 10px;
+            width: 100%;
         }
         .card p, .card h4{
            margin-bottom: 5px;
@@ -166,6 +167,16 @@
                     box-shadow: 0 3px 19px 0 rgba(0, 0, 0, .12), 0 2px 2px 0 rgba(0, 0, 0, .24);" >
             Ajouter<br><span style="font-size: 14px; color: white; font-weight: bolder;margin: 0">+</span><br>Annonce
         </a>
+        <div class="row" style="display: none;" id="notification_container">
+            <div class="col-md-4 col-sm-1 col-xs-1"></div>
+            <div  class="col-md-4 col-sm-10 col-xs-10" id="notification"> Veuillez confirmer la suppréssion?
+                <div>
+                    <br>
+                    <span class="dismiss"><a title="dismiss this notification">Annuler</a></span>
+                    <span class="accepte"><a title="dismiss this notification">Confirmer</a></span>
+                </div>
+            </div>
+        </div>
 
 
         <div class="container  row col-lg-12 grey-background">
@@ -348,11 +359,15 @@
                 </div>
             </div>
             <!-- end row -->
+
             <div class="col-lg-8">
                 <div id="delcd-blog-section">
                     <!-- start one aff -->
                     <div class="container">
-
+                        <div class="col-md-12 linkBar" >
+                            <a href="index.html">Accueil</a> /
+                            <a href="#">Mes Annonces</a>
+                        </div>
                         <div class="row card">
                             <div class="feature-full-1col animate-box">
                                 <div class="image" style="background-image: url(../images/medium/mountain/pexels-photo-307008.jpg);"></div>
@@ -381,8 +396,8 @@
                                                 <i class="ti-angle-right"></i>
                                             </a>
                                         </p>
-                                        <p >
-                                            <a href="#" class="btn btn-primary btn-luxe-primary fa fa-trash"
+                                        <p>
+                                            <a href="#" onclick="deleteAnnonce(this);return false;" class="btn btn-primary btn-luxe-primary fa fa-trash"
                                                style="width: 120px; background-color: #ff162d"><span style=" font-size:0.7em; font-family: Roboto; color: white; margin-left: 2px">Supprimer</span>
                                                 <i class="ti-angle-right"></i>
                                             </a>
@@ -425,7 +440,7 @@
                                             </a>
                                         </p>
                                         <p >
-                                            <a href="#" class="btn btn-primary btn-luxe-primary fa fa-trash"
+                                            <a href="#" onclick="deleteAnnonce(this);return false;" class="btn btn-primary btn-luxe-primary fa fa-trash"
                                                style="width: 120px; background-color: #ff162d"><span style=" font-size:0.7em; font-family: Roboto; color: white; margin-left: 2px">Supprimer</span>
                                                 <i class="ti-angle-right"></i>
                                             </a>
@@ -467,8 +482,8 @@
                                                 <i class="ti-angle-right"></i>
                                             </a>
                                         </p>
-                                        <p >
-                                            <a href="#" class="btn btn-primary btn-luxe-primary fa fa-trash"
+                                        <p>
+                                            <a href="#" onclick="deleteAnnonce(this);return false;" class="btn btn-primary btn-luxe-primary fa fa-trash"
                                                style="width: 120px; background-color: #ff162d"><span style=" font-size:0.7em; font-family: Roboto; color: white; margin-left: 2px">Supprimer</span>
                                                 <i class="ti-angle-right"></i>
                                             </a>
