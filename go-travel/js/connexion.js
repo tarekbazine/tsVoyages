@@ -12,7 +12,7 @@ $(document).ready(function () {
         var email=$("#email_connexion").val();
         var mdp = $("#mot_de_passe_connexion").val();
 
-        if(email=='tina@esi.dz' && mdp=='tina')  window.location.replace("file:///E:/IHMPrototype/go-travel/index.html");
+        if(email=='tina@esi.dz' && mdp=='tina')  window.location.replace("index_logged.html");
         else {$("#erreur").text('Utilisateur ou mot de passe incorrect');
         $("#erreur").show();
         }

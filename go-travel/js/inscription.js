@@ -9,7 +9,7 @@ $(document).ready(function () {
         var mdpConf=$("#mdp_confirmation").val();
         console.log(email+" "+mdp+" "+mdpConf);
 
-        if(email!='tina@esi.dz' && mdp==mdpConf)  window.location.replace("file:///E:/IHMPrototype/go-travel/inscriptioninfo.html");
+        if(email!='tina@esi.dz' && mdp==mdpConf)  window.location.replace("inscriptioninfo.html");
         else {
             if(email=='tina@esi.dz')  $("#erreur_inscription").text('Cette adresse email existe déjà');
             else  $("#erreur_inscription").text('Vos mots de passe ne correspondent pas');
@@ -18,16 +18,16 @@ $(document).ready(function () {
     });
 
     $("#annuler_inscription").click(function () {
-        window.location.replace("file:///E:/IHMPrototype/go-travel/index.html");
+        window.location.replace("index.html");
     });
 
     $("#inscription_info").submit(function (e) {
         e.preventDefault()
-        window.location.replace("file:///E:/IHMPrototype/go-travel/index.html");
+        window.location.replace("index_logged.html");
     });
 
     $("#annuler_info").click(function () {
-        window.location.replace("file:///E:/IHMPrototype/go-travel/index.html");
+        window.location.replace("index.html");
     })
 
     $("#photo_profil").click(function () {

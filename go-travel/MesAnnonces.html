@@ -169,7 +169,7 @@
         </a>
         <div class="row" style="display: none;" id="notification_container">
             <div class="col-md-4 col-sm-1 col-xs-1"></div>
-            <div  class="col-md-4 col-sm-10 col-xs-10" id="notification"> Veuillez confirmer la suppréssion?
+            <div  class="col-md-4 col-sm-10 col-xs-10" id="notification"> Veuillez confirmer la suppréssion? &ensp; <span class="fa fa-trash"></span>
                 <div>
                     <br>
                     <span class="dismiss"><a title="dismiss this notification">Annuler</a></span>
@@ -366,8 +366,15 @@
                     <div class="container">
                         <div class="col-md-12 linkBar" >
                             <a href="index.html">Accueil</a> /
-                            <a href="#">Mes Annonces</a>
+                            Mes Annonces
                         </div>
+
+                        <div id="successDelete" class="alert alert-danger alert-dismissable"
+                        style="margin-left: -15px; margin-right: 15px;">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            Annonce supprimée avec succès.
+                        </div>
+
                         <div class="row card">
                             <div class="feature-full-1col animate-box">
                                 <div class="image" style="background-image: url(../images/medium/mountain/pexels-photo-307008.jpg);"></div>
@@ -497,7 +504,6 @@
                             </div>
 
                         </div>
-
 
 
                     </div>

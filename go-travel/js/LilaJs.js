@@ -38,7 +38,7 @@ function holdForm(){
             $("#successAdd").slideUp(700);
         });
         $("#formulaireAjout")[0].reset();
-        location.href='MesAnnonces.html';
+       location.href='MesAnnonces.html';
     }
     else {
        $("#failAdd").fadeTo(2000, 500).slideUp(500, function(){
