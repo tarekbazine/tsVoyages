@@ -2588,3 +2588,7 @@ footer li{
 nav>ul>li>a:hover{
   color: #f78536!important;
 }
+
+header {
+  background-color: white;
+}
