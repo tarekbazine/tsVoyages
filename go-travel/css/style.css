@@ -2584,3 +2584,7 @@ footer li{
   text-decoration:none;
 
 }
+
+nav>ul>li>a:hover{
+  color: #f78536!important;
+}
